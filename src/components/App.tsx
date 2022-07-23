@@ -5,6 +5,7 @@ import UseStateHook from './use-state';
 import UseEffectHook from './use-effect';
 import UseRefHook from './use-ref';
 import UseReducerHook from './use-reducer';
+import UseContextHook from './use-context';
 
 interface Props { }
 
@@ -20,6 +21,7 @@ const App: FC<Props> = () => {
                   <Tab label="use-Effect" value="2" />
                   <Tab label="use-ref" value="3" />
                   <Tab label="use-reducer" value="4" />
+                  <Tab label="use-context" value="5" />
                </TabList>
             </Box>
 
@@ -27,6 +29,7 @@ const App: FC<Props> = () => {
             <TabPanel value="2"><UseEffectHook /></TabPanel>
             <TabPanel value="3"><UseRefHook /></TabPanel>
             <TabPanel value="4"><UseReducerHook /></TabPanel>
+            <TabPanel value="5"><UseContextHook /></TabPanel>
          </TabContext>
       </Box>
    </Container>
