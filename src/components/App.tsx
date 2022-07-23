@@ -4,11 +4,12 @@ import { TabContext, TabList, TabPanel } from '@mui/lab';
 import UseStateHook from './use-state';
 import UseEffectHook from './use-effect';
 import UseRefHook from './use-ref';
+import UseReducerHook from './use-reducer';
 
 interface Props { }
 
 const App: FC<Props> = () => {
-   const [value, setValue] = useState<string>("3");
+   const [value, setValue] = useState<string>("1");
 
    return <Container>
       <Box sx={{ width: '100%', typography: 'body1' }}>
@@ -18,12 +19,14 @@ const App: FC<Props> = () => {
                   <Tab label="use-State" value="1" />
                   <Tab label="use-Effect" value="2" />
                   <Tab label="use-ref" value="3" />
+                  <Tab label="use-reducer" value="4" />
                </TabList>
             </Box>
 
             <TabPanel value="1"><UseStateHook /></TabPanel>
             <TabPanel value="2"><UseEffectHook /></TabPanel>
             <TabPanel value="3"><UseRefHook /></TabPanel>
+            <TabPanel value="4"><UseReducerHook /></TabPanel>
          </TabContext>
       </Box>
    </Container>
